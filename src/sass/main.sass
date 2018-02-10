@@ -1,0 +1,320 @@
+// Подключаем переменные с цветами
+@import "colors"
+// Подключаем шрифты
+@import "museo-sans"
+// Подключаем текстовые иконки
+@import "fontawesome"
+
+// Создаем миксины для начертаний шрифтов
+@mixin thin
+ font-family: 'Museo Sans Cyrl 100', sans-serif
+@mixin reg
+ font-family: 'Museo Sans Cyrl 300', sans-serif
+@mixin bold
+ font-family: 'Museo Sans Cyrl 700', sans-serif
+
+html
+ font-size: 10px
+body
+ @include reg
+ font-size: 14px
+ color: $main
+ul,li
+ display: block
+ margin: 0
+ padding: 0
+button, button:hover, button:focus, button:active
+ outline: none
+a, a:hover, a:active
+ text-decoration: none
+p
+ line-height: 1.3
+img
+ max-width: 100%
+
+/* -= preloader =- */
+#page-preloader
+ position: fixed
+ left: 0
+ top: 0
+ right: 0
+ bottom: 0
+ background: #bfc2c8
+ z-index: 100500
+ .cssload-thecube
+  width: 84px
+  height: 84px
+  position: absolute
+  left: 50%
+  top: 50%
+  margin: -42px 0 0 -42px
+
+@import "preloader"
+
+/* -= top-nav =- */
+.top-nav
+ background-color: rgba(#bfc2c8, 0.3)
+ padding: 17px 0 7px
+ border-top: 5px solid #58647a
+ border-bottom: 4px solid rgba(88, 100, 122, 0.03)
+.menu
+ margin-top: 20px
+ &__active
+  order: 5
+ &__item
+  margin-right: 24px
+ &__link
+  @include bold
+  font-size: 17px
+  color: #3f4b60
+  &:hover
+   color: $capital
+.button
+ margin-top: 13px
+ @include bold
+ width: 157px
+ padding: 6px 16px 5px 8px
+ font-size: 13px
+ background-color: $btn
+ border: none
+ border-bottom: 4px solid darken($btn, 7%)
+ color: #fff
+ transition: all 0.2s
+ &:hover
+  background-color: darken($btn, 7%)
+  border-bottom: 4px solid $btn
+ &:active
+  transform: scale(0.95)
+  .icon-phone
+   transform: rotateZ(45deg)
+ .icon-phone
+  transition: all 0.5s
+  margin-right: 5px
+  font-size: 18px
+  color: #46e6b0
+  /* MADAFOKIN BURGER */
+.burger
+ margin-top: 13px
+ font-size: 35px
+ line-height: 38px
+ text-align: center
+ width: 42px
+ height: 42px
+ background-color: $btn
+ color: rgba(#fff,0.8)
+ border: 2px solid darken($btn, 5%)
+ cursor: pointer
+ transition: all 0.2s
+ padding: 0
+ .icon-menu
+  &:before
+   margin: 0
+ &:hover
+  color: #fff
+  background-color: darken($btn, 5%)
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.3)
+ &:active
+  transform: scale(0.9)
+
+
+/* -= home-header =- */
+.home-header
+ background: url(../img/home-page/bg.jpg) center top no-repeat / cover
+ box-shadow: inset 0 -15px 0 0 rgba(#fff, 0.15)
+ .intro
+  margin-top: 10rem
+  &__title
+   @include bold
+   font-size: 58px
+  &__text
+   @include thin
+   font-size: 29px
+  &__socials
+   margin-top: 3rem
+   margin-left: 1rem
+   margin-bottom: 17.55rem
+   display: flex
+   padding: 8px 18px
+   background-color: rgba(#fff,0.55)
+   justify-content: space-between
+   width: 166px
+   font-size: 19px
+   box-shadow: 0 0 0 3px rgba(#fff,0.3)
+   border-radius: 2px
+   .icon
+    text-align: center
+    width: 32px
+    height: 31px
+    line-height: 28px
+    border: 2px solid
+   .icon-twitter
+    color: #43c9fd
+   .icon-telegram
+    color: #25a3d4
+   .icon-facebook
+    color: #3d6ca8
+
+/* -= features =- */
+.feature
+ padding-top: 5rem
+ text-align: center
+ background-color: $why
+ &__title
+  @include bold
+  font-size: 29px
+ &__item
+  margin-top: 4rem
+  h3
+   @include bold
+   margin: 2rem 0 1rem
+   font-size: 21px
+ &__btn
+  display: inline-block
+  margin: 8rem auto -50px
+  padding: 10px 50px 10px 35px
+  font-size: 16px
+  &:hover
+   color: #fff
+
+/* -= privilege =- */
+.privilege
+ padding: 10rem 0 8rem
+ &__item
+  text-align: center
+  h4
+   @include thin
+   font-size: 24px
+   margin-bottom: 1rem
+   span
+    color: $capital
+
+/* -= mission =- */
+.mission
+ background: url(../img/home-page/mission-bg.jpg) center top no-repeat / cover
+ color: rgba(#fff, 0.67)
+ padding: 4rem 0
+ &__description
+ &__link
+  @include bold
+  border: 2px solid
+  background-color: transparent
+  padding: 11px 30px
+  margin-bottom: 3rem
+  display: inline-block
+  margin-top: 2.5rem
+  font-size: 16px
+  color: rgba(#fff, 0.7)
+  transition: all 0.2s
+  &:hover
+   border: 2px solid
+   color: #fff
+   transform: scale(1.1)
+ &__title
+  @include bold
+  font-size: 23px
+  color: rgba(#fff, 0.4)
+  margin-bottom: 3.5rem
+  &:after
+   content: ''
+   display: block
+   height: 3px
+   width: 72%
+   transform: translateY(1.5rem)
+   background: rgba(#fff, 0.1)
+ &__text
+  p
+   margin-bottom: 2rem
+  &_left
+   max-width: 43rem
+  &_right
+   max-width: 35rem
+ &__news
+  .mission__title
+   &:after
+    content: ''
+    display: block
+    height: 3px
+    width: 100%
+    transform: translateY(1.5rem)
+    background: rgba(#fff, 0.1)
+  .news
+   &__item
+    position: relative
+    margin-bottom: 2.5rem
+    padding-bottom: 2rem
+    border-bottom: 1px solid rgba(#fff, 0.1)
+    img
+     margin-right: 1.5rem
+    p
+     font-size: 13px
+     @include bold
+     &:after
+       position: absolute
+       content: '02.12.2015'
+       display: block
+       right: 0
+       bottom: 1rem
+       font-size: 10px
+       @include thin
+
+/* -= lower-nav =- */
+.lower-nav
+ background-color: $lower-nav
+ padding-bottom: 4.5rem
+ &__item
+  flex-direction: column
+  h3
+   margin: 5rem 0 2rem
+   font-size: 19px
+   @include bold
+   color: rgba(#fff, 0.6)
+  a
+   color: rgba(#fff, 0.46)
+   &:hover
+    color: #fff
+
+/* -= home-footer =- */
+.home-footer
+ padding-bottom: 4.5rem
+ background: $footer
+ color: rgba(#fff, 0.52)
+ font-size: 12px
+ a
+  color: rgba(#fff, 0.52)
+ .cta
+  margin-top: 3.7rem
+  address
+   line-height: 1.3
+ .author
+  margin-top: 3.7rem
+  &:hover
+   color: #fff
+  &__upper
+   text-transform: uppercase
+  &__logo
+   margin-top: 2px
+   margin-right: 5px
+   display: block
+   padding: 0 0.65rem
+   text-align: center
+   font-size: 15px
+   width: 25px
+   height: 25px
+   line-height: 25px
+   border: 1px solid rgba(#fff, 0.63)
+ .rights
+  span
+   @include bold
+  a
+   text-decoration: underline
+   &:hover
+    color: #fff
+ .footer-btn
+  margin-top: 6.5rem
+
+
+
+
+
+
+@import "media"
