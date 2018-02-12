@@ -11,13 +11,17 @@ $(function(){
     $('.menu-collapse').toggleClass('menu__active');
   });
 
-  $("a.feature__btn").click(function() {
+  $('a.feature__btn').click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top
       }, {
-         duration: 600,
+         duration: 700,
          easing: "swing"
       });
       return false;
    });
+
+  $('.slider').slick({
+    dots: true
+  });
 });
