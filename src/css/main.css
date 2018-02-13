@@ -139,6 +139,10 @@ a, a:hover, a:active {
   text-decoration: none;
 }
 
+input, input:hover {
+  outline: none;
+}
+
 p {
   line-height: 1.3;
 }

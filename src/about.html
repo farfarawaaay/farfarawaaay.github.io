@@ -345,12 +345,12 @@
  <div style="display: none;">
    <div class="box-modal" id="modal">
      <div class="box-modal_close arcticmodal-close">закрыть</div>
-     <form action="success.php" class="form" method="post">
+     <form action="success.php" id="popupResult" class="form js-form" method="post">
        <h3 class="form__header">Мы вас найдем с:</h3>
-       <input class="form__inp" type="text" name="name" id="name" placeholder="Имя" autofocus required>
-       <input class="form__inp" type="email" name="email" id="email" placeholder="E-mail" required>
-       <input class="form__inp" type="tel" name="tel" id="tel" placeholder="Телефон" required>
-       <button class="form__btn" type="submit">Оставить заявку</button>
+       <input class="form__inp form-control form__field" type="text" name="name" id="name" placeholder="Имя" autofocus required>
+       <input class="form__inp form-control form__field" type="email" name="email" id="email" placeholder="E-mail" required>
+       <input class="form__inp form-control form__field" type="tel" name="tel" id="tel" placeholder="Телефон" required>
+       <button class="form__btn" data-submit>Оставить заявку</button>
      </form>
    </div>
  </div>
@@ -364,6 +364,7 @@
  <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
  <script src="slick/slick.js"></script>
  <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+ <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
  <script src="js/main.js"></script>
 </body>
 </html>
