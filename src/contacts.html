@@ -18,6 +18,9 @@
 
  <!-- Bootstrap core CSS -->
  <link href="css/bootstrap.min.css" rel="stylesheet">
+ <!-- Arcticmodal -->
+ <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
+ <link rel="stylesheet" href="css/simple.css">
  <!-- Custom styles for this template -->
  <link href="css/main.css" rel="stylesheet">
 </head>
@@ -54,7 +57,7 @@
      </div>
      <!-- /.col-lg-6 -->
      <div class="col-8 col-sm-4 col-md-3 col-lg-2">
-      <a href="#" class="request-btn button d-flex align-items-center">
+      <a href="#" class="request-btn modal-button button d-flex align-items-center">
        <i class="icon-phone"></i>Заказать звонок
       </a>
      </div>
@@ -116,20 +119,18 @@
    <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-lg-4">
-        <h1 class="bread-nav__title">О компании</h1>
+        <h1 class="bread-nav__title">Контакты</h1>
          <ol class="breadcrumb">
            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-           <li class="breadcrumb-item active" aria-current="page">О компании</li>
+           <li class="breadcrumb-item active" aria-current="page">Контактная информация</li>
          </ol>
       </div>
       <!-- /.col-12 col-lg-4 -->
-      <div class="col-12 col-lg-6 mt-5 mt-lg-0 ml-auto align-content-end">
+      <div class="col-12 col-md-8 mt-5 mt-lg-0 ml-auto align-content-end">
         <ul class="secondary-nav d-flex justify-content-end">
-          <li><a href="#">Видение</a></li>
-          <li><a class="active" href="#">Преимущества</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="#">Партнеры</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a class="active" href="#">Офис в Одессе</a></li>
+          <li><a href="#">Офис в Киеве</a></li>
+          <li><a href="#">Офис в Харькове</a></li>
         </ul>
       </div>
       <!-- /.col-12 col-lg-6 -->
@@ -140,12 +141,63 @@
  </section>
  <!-- /#bread-nav.bread-nav -->
 
+ <section class="contacts" id="contacts">
+   <div class="container-fluid">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64007.14365453774!2d30.69880287328726!3d46.4642694346807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6318a0b864c43%3A0x129f8fe28cf2176c!2z0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1518451989882" width="600" height="450" allowfullscreen></iframe>
+     <div class="row">
+       <div class="col-lg-5 ml-auto">
+         <div class="contacts__block">
+           <div class="contacts__heading d-flex">
+             <h3>LAB Consulting</h3>
+             <div class="contacts__links">
+                <a href="#">
+                  <i class="icon icon-facebook"></i></a>
+                <a href="#">
+                  <i class="icon icon-twitter"></i></a>
+                <a href="#">
+                  <i class="icon icon-telegram"></i></a>
+              </div>
+           </div>
+           <div class="contacts__info d-flex">
+             <div class="left m-auto">
+              <div class="d-flex"><i class="icon-phone"></i><p>+38 (048) 756-23-54</p></div>
+              <div class="d-flex"><i class="icon-phone"></i><p>+38 (048) 756-23-54</p></div>
+              <div class="d-flex">
+                <i class="icon-direction"></i>
+                <p>
+                  65000, <br>
+                  Украина, г. Одесса <br>
+                  Ул Базарная, 36
+                </p>
+              </div>
+              <div class="d-flex">
+                <i class="icon-mail"></i>
+                <p>info@lab-consult.com</p>
+              </div>
+             </div>
+             <!-- /.left -->
+             <div class="rigth d-none d-lg-block">
+               <p class="right__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+               <p class="right__description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+             </div>
+             <!-- /.rigth -->
+           </div>
+           <!-- /.contacts__info -->
+         </div>
+         <!-- /.contacts__block -->
+       </div>
+     </div>
+   </div>
+   <!-- /.container-fluid -->
+ </section>
+ <!-- /#map.map -->
+
  
 
  <section class="lower-nav" id="lower-nav">
    <div class="container">
      <div class="row">
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>О компании</h3>
            <a href="#">Видение, миссия и ценности</a>
@@ -156,7 +208,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Пресс – центр</h3>
            <a href="#">Новости</a>
@@ -166,7 +218,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Услуги</h3>
            <a href="#">Legal (Юридическое сопровождение)</a>
@@ -175,10 +227,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-     </div>
-     <!-- /.row -->
-     <div class="row">
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Отрасли</h3>
            <a href="#">Аграрный сектор</a>
@@ -190,7 +239,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Образовательный центр</h3>
            <a href="#">Про Образовательный Центр</a>
@@ -200,7 +249,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Соц. предпринимательство</h3>
            <a href="#">Социальная миссия</a>
@@ -256,7 +305,7 @@
        </div>
        <!-- /.col-lg-2 -->
        <div class="col-lg-2 col-sm-4 ml-md-auto">
-         <a href="#" class="footer-btn button d-flex align-items-center">
+         <a href="#" class="footer-btn modal-button button d-flex align-items-center">
           <i class="icon-phone"></i>Заказать звонок
          </a>
        </div>
@@ -270,14 +319,26 @@
 
 
 
-
+ <div style="display: none;">
+   <div class="box-modal" id="modal">
+     <div class="box-modal_close arcticmodal-close">закрыть</div>
+     <form action="success.php" class="form" method="post">
+       <h3 class="form__header">Мы вас найдем с:</h3>
+       <input class="form__inp" type="text" name="name" id="name" placeholder="Имя" autofocus required>
+       <input class="form__inp" type="email" name="email" id="email" placeholder="E-mail" required>
+       <input class="form__inp" type="tel" name="tel" id="tel" placeholder="Телефон" required>
+       <button class="form__btn" type="submit">Оставить заявку</button>
+     </form>
+   </div>
+ </div>
 
 
 
  <!--=== Scripts ======================================================================================================================================= -->
  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
  <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
-
+ <script src="slick/slick.js"></script>
+ <script src="js/jquery.arcticmodal-0.3.min.js"></script>
  <script src="js/main.js"></script>
 </body>
 </html>

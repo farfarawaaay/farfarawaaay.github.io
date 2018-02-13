@@ -18,6 +18,9 @@
 
  <!-- Bootstrap core CSS -->
  <link href="css/bootstrap.min.css" rel="stylesheet">
+ <!-- Arcticmodal -->
+ <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
+ <link rel="stylesheet" href="css/simple.css">
  <!-- Custom styles for this template -->
  <link href="css/main.css" rel="stylesheet">
 </head>
@@ -54,7 +57,7 @@
      </div>
      <!-- /.col-lg-6 -->
      <div class="col-8 col-sm-4 col-md-3 col-lg-2">
-      <a href="#" class="request-btn button d-flex align-items-center">
+      <a href="#" class="request-btn modal-button button d-flex align-items-center">
        <i class="icon-phone"></i>Заказать звонок
       </a>
      </div>
@@ -217,7 +220,7 @@
  <section class="lower-nav" id="lower-nav">
    <div class="container">
      <div class="row">
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>О компании</h3>
            <a href="#">Видение, миссия и ценности</a>
@@ -228,7 +231,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Пресс – центр</h3>
            <a href="#">Новости</a>
@@ -238,7 +241,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Услуги</h3>
            <a href="#">Legal (Юридическое сопровождение)</a>
@@ -247,10 +250,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-     </div>
-     <!-- /.row -->
-     <div class="row">
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Отрасли</h3>
            <a href="#">Аграрный сектор</a>
@@ -262,7 +262,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Образовательный центр</h3>
            <a href="#">Про Образовательный Центр</a>
@@ -272,7 +272,7 @@
          </div>
        </div>
        <!-- /.col-lg-4 -->
-       <div class="col-lg-4 col-sm-6 text-center text-sm-left">
+       <div class="col-lg-4 col-md-6 text-center text-sm-left">
          <div class="lower-nav__item d-flex">
            <h3>Соц. предпринимательство</h3>
            <a href="#">Социальная миссия</a>
@@ -328,7 +328,7 @@
        </div>
        <!-- /.col-lg-2 -->
        <div class="col-lg-2 col-sm-4 ml-md-auto">
-         <a href="#" class="footer-btn button d-flex align-items-center">
+         <a href="#" class="footer-btn modal-button button d-flex align-items-center">
           <i class="icon-phone"></i>Заказать звонок
          </a>
        </div>
@@ -342,6 +342,18 @@
 
 
 
+ <div style="display: none;">
+   <div class="box-modal" id="modal">
+     <div class="box-modal_close arcticmodal-close">закрыть</div>
+     <form action="success.php" class="form" method="post">
+       <h3 class="form__header">Мы вас найдем с:</h3>
+       <input class="form__inp" type="text" name="name" id="name" placeholder="Имя" autofocus required>
+       <input class="form__inp" type="email" name="email" id="email" placeholder="E-mail" required>
+       <input class="form__inp" type="tel" name="tel" id="tel" placeholder="Телефон" required>
+       <button class="form__btn" type="submit">Оставить заявку</button>
+     </form>
+   </div>
+ </div>
 
 
 
@@ -350,7 +362,8 @@
  <!--=== Scripts ======================================================================================================================================= -->
  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
  <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
-
+ <script src="slick/slick.js"></script>
+ <script src="js/jquery.arcticmodal-0.3.min.js"></script>
  <script src="js/main.js"></script>
 </body>
 </html>

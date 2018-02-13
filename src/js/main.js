@@ -5,11 +5,15 @@ $(function(){
       $spinner.fadeOut();
       $preloader.delay(350).fadeOut('slow');
   });
+  // Preloader
+
 
   $('.burger').click(function() {
     $('.menu-collapse').toggleClass('d-none');
     $('.menu-collapse').toggleClass('menu__active');
   });
+  // Burger-menu
+
 
   $('a.feature__btn').click(function() {
       $("html, body").animate({
@@ -20,8 +24,14 @@ $(function(){
       });
       return false;
    });
+  // Smooth scroll
 
-  $('.slider').slick({
-    dots: true
+
+  $('.slider').slick();
+  // Slick slider
+
+  $('.modal-button').click(function(e) {
+    e.preventDefault();
+    $('#modal').arcticmodal();
   });
 });

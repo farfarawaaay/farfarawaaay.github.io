@@ -30,6 +30,18 @@
  .secondary-nav
   li
    padding: 10px
+ .contacts
+  &__block
+   top: 110px
+   padding-bottom: 20px
+  &__heading
+    flex-direction: column
+  &__links
+    margin-right: 25px
+ .mission
+  &__text
+    &_left, &_right
+      max-width: none
 // -= SM =- Tablets
 @media screen and (max-width: 768px)
  .top-nav
@@ -41,6 +53,10 @@
     padding-left: 15px
    &:last-child
     padding-right: 15px
+ .contacts
+  &__block
+   padding-bottom: 30px
+
 
 // -= XS =- Phones
 @media screen and (max-width: 576px)
@@ -50,8 +66,6 @@
    &__item
     margin-bottom: 10px
     text-align: center
-  .logo
-   margin-left: 8%
   .request-btn
    margin-left: 40%
   .burger
@@ -63,6 +77,10 @@
  .points
   h2
    font-size: 24px
+  &__item
+    flex-direction: column
+    img
+      margin-bottom: 20px
  .capacity
   &__item
    &:first-child
@@ -73,6 +91,27 @@
   &__consult
    span
     display: block
+ .contacts
+  &__info
+   margin: 0
+   
+  &__heading
+   h3
+    display: none
+  &__links
+   display: none
+  &__block
+   top: 278px
+   right: 0
+   left: 0
+   padding: 10px
+   padding-top: 0
+   padding-bottom: 0
+ .lower-nav
+  &__item
+    text-align: center
+ .box-modal
+  max-width: 60%
 
 
 // Custom, iPhone Retina
